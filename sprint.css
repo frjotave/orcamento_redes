@@ -1,0 +1,241 @@
+/* Estilos Gerais */
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+h1, h2, h3 {
+    color: #5f00ad;
+}
+
+h2 span {
+    font-weight: bold;
+    color: #007bff; /* Destaque para o orçamento carregado */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.cab section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre os elementos */
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas pequenas */
+}
+
+#descricao-orcamento {
+    flex-grow: 1; /* Permite que o input se expanda */
+    height: 40px;
+    font-size: 16px;
+    padding: 8px;
+    min-width: 250px; /* Garante que o input não fique muito pequeno */
+    max-width: 650px; /* Evita que o input fique muito grande em telas largas */
+    width: 100%; /* Adapta o tamanho ao contêiner */
+    border-radius: 50px;
+    border: none;
+    box-shadow: rgba(149, 7, 192, 0.35) 0px 5px 15px;
+}
+
+.cab button {
+    border-radius: 50px;
+    max-width: 200px;
+    box-shadow: rgba(71, 4, 148, 0.507) 0px 5px 15px;
+}
+
+input, button {
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #370091;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+/* Efeito de Vibração Rápida ao Passar o Mouse */
+button:hover {
+    animation: vibrar 0.2s linear 2;
+}
+
+@keyframes vibrar {
+    0% { transform: translateX(2px); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+
+.liste {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(149, 7, 192, 0.35) 0px 5px 15px;
+   text-align: center;
+   align-items: center; /* Alinha os itens no centro horizontalmente */
+   justify-content: center; /* Alinha os itens no centro verticalmente */
+   
+   
+}
+
+/* Lista de orçamentos */
+ul#lista-orcamentos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Itens da lista */
+ul#lista-orcamentos li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 8px 0;
+    border-left: 5px solid #500274; /* Destaque para cada item */
+    font-size: 18px;
+    color: #000000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-align: center;
+    
+   
+}
+
+ul#lista-orcamentos li:hover {
+    background-color: #f1f1f1; /* Efeito hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, button {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+ul {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+:root {
+    --primary-color: rgb(66, 0, 86);
+    --primary-color-hover: #1a0032;
+    --box-shadow-color: rgba(149, 7, 192, 0.35);
+    --border-radius: 50px;
+    --font-size: 16px;
+    --padding: 8px;
+    --min-width: 250px;
+    --max-width: 650px;
+    --transition-duration: 0.3s;
+}
+
+section:nth-of-type(3) {
+    flex-grow: 1;
+    height: 40px;
+    font-size: var(--font-size);
+    padding: var(--padding);
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+section:nth-of-type(3) div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Espaço entre os campos de entrada */
+}
+
+section:nth-of-type(3) button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
+}
+
+section:nth-of-type(3) button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+section:nth-of-type(3) button:focus {
+    outline: 2px solid var(--primary-color-hover);
+    outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    section:nth-of-type(3) {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    section:nth-of-type(3) button {
+        font-size: 14px;
+    }
+}
